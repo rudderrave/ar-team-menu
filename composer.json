@@ -1,0 +1,19 @@
+{
+  "name": "arteam/ar-team-menu",
+  "description": "AR-team menu module",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Rave",
+      "email": "rudder.rave@gmail.com"
+    }
+  ],
+  "require": {
+    "arteam/ar-team-core": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "arteam\\menu\\": ""
+    }
+  }
+}
