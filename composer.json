@@ -1,5 +1,5 @@
 {
-  "name": "arteam/ar-team-menu",
+  "name": "rudderrave/ar-team-menu",
   "description": "AR-team menu module",
   "license": "Apache-2.0",
   "authors": [
@@ -9,7 +9,7 @@
     }
   ],
   "require": {
-    "arteam/ar-team-core": "dev-master"
+    "rudderrave/ar-team-core": "dev-master"
   },
   "autoload": {
     "psr-4": {
