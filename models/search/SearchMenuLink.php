@@ -6,7 +6,7 @@ use arteam\models\MenuLink;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use arteam\helpers\YeeHelper;
+use arteam\helpers\ArteamHelper;
 use arteam\models\OwnerAccess;
 use arteam\models\User;
 
@@ -66,7 +66,7 @@ class SearchMenuLink extends MenuLink
             $this->$key = $value;
         }
 
-        $restrictLinkAccess = (YeeHelper::isImplemented(MenuLink::className(), OwnerAccess::CLASSNAME)
+        $restrictLinkAccess = (ArteamHelper::isImplemented(MenuLink::className(), OwnerAccess::CLASSNAME)
             && !User::hasPermission(MenuLink::getFullAccessPermission()));
 
         if (!$this->validate()) {
