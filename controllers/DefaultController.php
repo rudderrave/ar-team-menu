@@ -5,7 +5,7 @@ namespace arteam\menu\controllers;
 use arteam\controllers\admin\BaseController;
 use Yii;
 use yii\helpers\StringHelper;
-use arteam\helpers\YeeHelper;
+use arteam\helpers\ArteamHelper;
 use arteam\models\OwnerAccess;
 use arteam\models\User;
 use yii\helpers\ArrayHelper;
