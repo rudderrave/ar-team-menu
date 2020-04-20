@@ -34,6 +34,11 @@ class DefaultController extends BaseController
         ]);
     }
 
+    /**
+     * @param $action
+     * @param null $model
+     * @return array
+     */
     protected function getRedirectPage($action, $model = null)
     {
         switch ($action) {
@@ -58,7 +63,7 @@ class DefaultController extends BaseController
         $searchModel = $this->modelSearchClass ? new $this->modelSearchClass : null;
         $searchLinkModel = $this->modelLinkSearchClass ? new $this->modelLinkSearchClass : null;
 
-        $restrictAccess = (YeeHelper::isImplemented($modelClass, OwnerAccess::CLASSNAME)
+        $restrictAccess = (ArteamHelper::isImplemented($modelClass, OwnerAccess::CLASSNAME)
             && !User::hasPermission($modelClass::getFullAccessPermission()));
 
         if ($searchModel) {
@@ -78,6 +83,9 @@ class DefaultController extends BaseController
         return $this->renderIsAjax('index', compact('dataProvider', 'searchModel', 'searchLinkModel'));
     }
 
+    /**
+     * @return bool
+     */
     public function actionSaveOrders()
     {
         if(Yii::$app->getRequest()->isAjax){
